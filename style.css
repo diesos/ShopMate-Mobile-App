@@ -44,3 +44,23 @@ img{
     width: 150px;
     margin: 0 auto;
 }
+ul{
+    margin: 0 auto;
+    padding: 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+li{
+
+    font-family: 'Rubik', sans-serif;
+    margin: 10px 5px;
+    padding: 10px;
+    list-style: none;
+    background-color: #AC485A;
+    border-radius: 8px;
+    color: white;
+    box-sizing: content-box;
+    font-weight: 900;
+}
