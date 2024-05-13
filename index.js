@@ -14,12 +14,17 @@ console.log(database)
 
 const inputFieldEl = document.getElementById("input-field")
 const addButtonEl = document.getElementById("add-button")
+const shoppingUl = document.getElementById("shopping-list")
 
 
 
 addButtonEl.addEventListener("click", function() {
     let inputValue = inputFieldEl.value
-    push(foodsInDb, inputValue)
+    if (inputValue !== ""){
+        shoppingUl.innerHTML += `<li>${inputValue}</li>`
+        push(foodsInDb, inputValue)
 
-    console.log(foodsInDb, inputValue)
+        console.log(foodsInDb, inputValue)
+        inputFieldEl.value = ""
+    }
 })
