@@ -16,7 +16,7 @@ const addButtonEl = document.getElementById("add-button")
 const shoppingUl = document.getElementById("shopping-list")
 
 onValue(foodsInDb, function(snapshot) {
-    let foodsArray = Object.values(snapshot.val())
+    let foodsArray = Object.entries(snapshot.val())
     clearList()
     clearInputEl(inputFieldEl)
     for (let i = 0; i < foodsArray.length; i++){
@@ -40,8 +40,14 @@ function clearInputEl(elem){
     elem.value = ""
 }
 //Function to add the value of input field as an <li> innerhtml.
-function addElementToList(elem){
-    shoppingUl.innerHTML += `<li>${elem}</li>`
+function addElementToList(item){
+    let itemId = item[0]
+    let itemValue = item[1]
+
+    let newItem = document.createElement("li")
+    newItem.textContent = itemValue
+
+    shoppingUl.append(newItem)
 }
 
 //Function to clear <li> list for fetching database properly
@@ -87,15 +93,15 @@ darkModeToggle.addEventListener('click', () => {
     }
 })
 
-// Footer button, optional. This is for if you have a second dark mode toggle button
-//in the footer, just make sure the button is inside the footer tag, and it will be
-//linked to this function.
+// // Footer button, optional. This is for if you have a second dark mode toggle button
+// //in the footer, just make sure the button is inside the footer tag, and it will be
+// //linked to this function.
 
-    darkModeToggleFooter.addEventListener('click', () => {
-        darkMode = localStorage.getItem("darkMode");
-        if (darkMode !== "enabled") {
-            enableDarkMode();
-        } else {
-            disableDarkMode();
-        }
-    })
+//     darkModeToggleFooter.addEventListener('click', () => {
+//         darkMode = localStorage.getItem("darkMode");
+//         if (darkMode !== "enabled") {
+//             enableDarkMode();
+//         } else {
+//             disableDarkMode();
+//         }
+//     })
