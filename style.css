@@ -38,6 +38,11 @@ button {
 	box-sizing: border-box;
 	width: auto;
     margin-bottom: 10px;
+    transition: color 1s ease-in;
+}
+button:hover{
+    background-color: #432000;
+    cursor: pointer;
 }
 img{
 
@@ -82,6 +87,11 @@ li{
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
     flex-grow: 1;
     text-align: center;
+}
+
+li:hover{
+    background-color: #FFECC7;
+    cursor: pointer;
 }
 
 .dark-mode-button{
