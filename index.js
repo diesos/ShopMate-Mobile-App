@@ -16,8 +16,8 @@ const addButtonEl = document.getElementById("add-button")
 const shoppingUl = document.getElementById("shopping-list")
 
 onValue(foodsInDb, function(snapshot) {
-    let foodsArray = Object.entries(snapshot.val())
     clearList()
+    let foodsArray = Object.entries(snapshot.val())
     clearInputEl(inputFieldEl)
     for (let i = 0; i < foodsArray.length; i++){
 
