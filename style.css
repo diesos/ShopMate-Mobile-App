@@ -87,6 +87,7 @@ li{
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
     flex-grow: 1;
     text-align: center;
+    user-select : none;
 }
 
 li:hover{
@@ -96,6 +97,12 @@ li:hover{
 
 .dark-mode-button{
     align-self:last baseline;
+}
 
+img{
+    user-select : none;
+}
 
+p{
+    user-select : none;
 }
