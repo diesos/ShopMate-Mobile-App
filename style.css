@@ -37,7 +37,7 @@ button {
     padding: 1em;
 	box-sizing: border-box;
 	width: auto;
-
+    margin-bottom: 10px;
 }
 img{
 
@@ -55,12 +55,12 @@ ul{
 li{
 
     font-family: 'Rubik', sans-serif;
-    margin: 10px 5px;
-    padding: 10px;
+    margin: 5px 5px;
+    padding: 10px 23px;
     list-style: none;
-    background-color: #AC485A;
+    background-color: white;
     border-radius: 8px;
-    color: white;
-    box-sizing: content-box;
+    color: #6F5738;
     font-weight: 900;
+    font-size: 1.25em;
 }
