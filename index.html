@@ -1,14 +1,21 @@
 <!doctype html>
 <html>
     <head>
+
         <title>Add to Cart</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="dark.css">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div class="container">
+            <button class="dark-mode-button top-dark-mode-button" aria-label="dark mode toggle">
+                <span aria-hidden="true" class="dark-toggle">
+                    <span class="DTspan"></span>
+                </span>
+            </button>
         <img src="assets/cat.png" alt="logo of a cat inside a cart"/>
         <input type="text" id="input-field" placeholder="Add items here">
         <button id="add-button">Add to cart</button>
