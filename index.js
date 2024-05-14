@@ -18,11 +18,11 @@ const shoppingUl = document.getElementById("shopping-list")
 onValue(foodsInDb, function(snapshot) {
     let foodsArray = Object.values(snapshot.val())
     clearList()
+    clearInputEl(inputFieldEl)
     for (let i = 0; i < foodsArray.length; i++){
 
         let currentFood = foodsArray[i]
         addElementToList(currentFood)
-        clearInputEl(inputFieldEl)
     }
 
 })
@@ -30,12 +30,10 @@ onValue(foodsInDb, function(snapshot) {
 // Function to add element to the list
 addButtonEl.addEventListener("click", function() {
     let inputValue = inputFieldEl.value
+    clearInputEl(inputFieldEl)
     if (inputValue !== ""){
         addElementToList(inputValue)
         push(foodsInDb, inputValue)
-
-        console.log(foodsInDb, inputValue)
-        clearInputEl(inputFieldEl)
     }
 })
 // Function to clear the input field
@@ -47,6 +45,7 @@ function addElementToList(elem){
     shoppingUl.innerHTML += `<li>${elem}</li>`
 }
 
+//Function to clear <li> list for fetching database properly
 function clearList(){
     shoppingUl.innerHTML = ""
 }
