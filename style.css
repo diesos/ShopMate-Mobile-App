@@ -64,3 +64,8 @@ li{
     font-weight: 900;
     font-size: 1.25em;
 }
+
+.dark-mode-button{
+    align-self:last baseline;
+
+}

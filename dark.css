@@ -13,7 +13,7 @@ then add your css properties like normal. That's it!
 Scroll to the bottom to start adding your dark mode styles
 
 */
-/* SOURCE : https://www.oakharborwebdesigns.com/blog/2020/december/how-to-add-dark-mode-to-a-website#blog-post */
+/* SOURCE : https://www.oakharborwebdesigns.com/blog/2020/december/how-to-add-dark-mode-to-a-website#blog-post /
 /* note that Internet Explorer does not support css variables */
 :root {
     --dark: #000;
@@ -42,9 +42,7 @@ Scroll to the bottom to start adding your dark mode styles
 }
 
 .top-dark-mode-button {
-    position: absolute;
-    top: 60px;
-    right: 15px;
+
     -webkit-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
