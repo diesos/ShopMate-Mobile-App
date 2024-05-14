@@ -14,7 +14,7 @@ Shopmate is an educational project created to demonstrate proficiency in JavaScr
 
 1. **Add Items:** Enter the items you need to buy into the input field and click the "Add" button to add them to your shopping list.
 
-2. **Mark as Purchased:** When you purchase an item from your shopping list, simply click on the item to mark it as purchased. It will then disappear from the list.
+2. **Mark as Purchased:** When you purchase an item from your shopping list, simply double click on the item to mark it as purchased. It will then disappear from the list.
 
 ## Technologies Used
 
