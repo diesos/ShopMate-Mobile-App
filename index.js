@@ -17,14 +17,19 @@ const shoppingUl = document.getElementById("shopping-list")
 
 onValue(foodsInDb, function(snapshot) {
     clearList()
-    let foodsArray = Object.entries(snapshot.val())
-    clearInputEl(inputFieldEl)
-    for (let i = 0; i < foodsArray.length; i++){
+    // Check if there is a value before fetching database if not, ask for typing a value
+    if (snapshot.exists()){
+        let foodsArray = Object.entries(snapshot.val())
+        clearInputEl(inputFieldEl)
+        for (let i = 0; i < foodsArray.length; i++){
 
-        let currentFood = foodsArray[i]
-        addElementToList(currentFood)
+            let currentFood = foodsArray[i]
+            addElementToList(currentFood)
+        }
     }
-
+    else {
+        shoppingUl.innerHTML = '<p style="color:#AC485A;">Try to add something...</p>';
+    }
 })
 
 // Function to add element to the list
@@ -61,8 +66,7 @@ function addElementToList(item){
 function clearList(){
     shoppingUl.innerHTML = ""
 }
-///////////////// Dark Mode JS
-// Add this to your javascript file
+// ********************************** Dark Mode JS
 
 /* Body */
 const body = document.querySelector('body');
@@ -99,6 +103,29 @@ darkModeToggle.addEventListener('click', () => {
         disableDarkMode();
     }
 })
+
+// Function to update text color based on dark mode setting
+function updateTextColor() {
+    var shoppingUl = document.getElementById("yourShoppingUlId");
+
+    // Check if dark mode is enabled in localStorage
+    if (localStorage.getItem("darkMode") === 'enabled') {
+        shoppingUl.innerHTML = '<p style="color:white;">Try to add something...</p>';
+    } else {
+        shoppingUl.innerHTML = '<p style="color:black;">Try to add something...</p>';
+    }
+}
+
+// Call the function to initially set the text color
+
+
+// Event listener to detect changes in dark mode setting
+window.addEventListener('storage', function(e) {
+    if (e.key === 'darkMode') {
+        // Update text color when dark mode setting changes
+        updateTextColor();
+    }
+});
 
 // // Footer button, optional. This is for if you have a second dark mode toggle button
 // //in the footer, just make sure the button is inside the footer tag, and it will be
