@@ -1,5 +1,5 @@
 import {initializeApp} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
-import {getDatabase, ref, push, onValue} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
+import {getDatabase, ref, push, onValue, remove} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 
 //Database connection
 const appSettings = {
@@ -39,15 +39,22 @@ addButtonEl.addEventListener("click", function() {
 function clearInputEl(elem){
     elem.value = ""
 }
-//Function to add the value of input field as an <li> innerhtml.
+//Function to add the value of input field as an <li>  and function to delete it
 function addElementToList(item){
     let itemId = item[0]
     let itemValue = item[1]
 
     let newItem = document.createElement("li")
+    newItem.classList.add("item")
     newItem.textContent = itemValue
+    newItem.addEventListener("dblclick", function(){
+        let exactLocationInDb = ref(database, `Foods/${itemId}`)
+        remove(exactLocationInDb)
+    })
 
     shoppingUl.append(newItem)
+
+
 }
 
 //Function to clear <li> list for fetching database properly
