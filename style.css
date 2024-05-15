@@ -40,7 +40,7 @@ button {
     margin-bottom: 10px;
     transition: color 1s ease-in;
 }
-button:hover{
+.add-btn:hover{
     background-color: #432000;
     cursor: pointer;
 }
