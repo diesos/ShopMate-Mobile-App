@@ -2,7 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Rubik', sans-serif;
-    background-color: #EEF0F4;
+    background-color: #FFE4C9;
 }
 
 .container{
@@ -16,7 +16,7 @@ html, body {
 input {
     font-family: 'Rubik', sans-serif;
     color: #B3B3B1;
-    background-color: #DCE1EB;
+    background-color: #FFF7F1;
     font-size: 1.25em;
     margin: 0.65em 0;
     padding: 1em;
@@ -29,7 +29,7 @@ input {
 button {
     font-family: 'Rubik', sans-serif;
     color: #FDFDFD;
-    background-color: #AC485A;
+    background-color: #FF8A08;
     border-radius: 8px;
     border: none;
     font-weight:100;
@@ -41,13 +41,22 @@ button {
     transition: color 1s ease-in;
 }
 .add-btn:hover{
-    background-color: #432000;
+    background-color: #E36414;
     cursor: pointer;
 }
 img{
 
     width: 150px;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
+}
+
+footer{
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    opacity: 40%;
+    text-align: center;
 }
 
 /* ul {
